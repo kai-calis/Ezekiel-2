@@ -21,7 +21,8 @@ public class player_move : MonoBehaviour {
     void PlayerMove()
     { //CONTROLS
         moveX = Input.GetAxis("Horizontal");
-        if (Input.GetButtonDown("Jump")){
+        if (Input.GetButtonDown("Jump") && isGrounded == true)
+        {
             Jump();
         }
         //ANIMATION
