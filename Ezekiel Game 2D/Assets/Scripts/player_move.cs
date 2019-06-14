@@ -14,6 +14,8 @@ public class player_move : MonoBehaviour {
     void Update()
     {
         PlayerMove();
+        PlayerRaycast();
+
 
 
     }
@@ -55,10 +57,30 @@ public class player_move : MonoBehaviour {
     }
 
    void OnCollisionEnter2D(Collision2D Col){
-        Debug.Log ("Player has collided with " + Col.collider.name);
-        if (Col.gameObject.tag == "ground"){
-            isGrounded = true;
+        //Debug.Log ("Player has collided with " + Col.collider.name);
+        
+
+    }
+
+    void PlayerRaycast() {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down);
+        if (hit != null && hit.collider != null && hit.distance< 2f && hit.collider.tag == "guard"){
+            GetComponent<Rigidbody2D> ().AddForce (Vector2.up * 150);
+            hit.collider.gameObject.GetComponent<Rigidbody2D> ().AddForce(Vector2.right * 200);
+            hit.collider.gameObject.GetComponent<Rigidbody2D>().gravityScale = 10;
+            hit.collider.gameObject.GetComponent<Rigidbody2D>().freezeRotation = false;
+
+            hit.collider.gameObject.GetComponent<BoxCollider2D> ().enabled = false;
+            hit.collider.gameObject.GetComponent<EnemyMove> ().enabled = false;
+            //Destroy(hit.collider.gameObject);
+           
         }
+        if (hit != null && hit.collider != null && hit.distance < 2f && hit.collider.tag != "guard"){
+            isGrounded = true;
+
+
+        }
+
 
     }
 
