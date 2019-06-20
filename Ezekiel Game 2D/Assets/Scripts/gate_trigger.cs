@@ -10,8 +10,7 @@ public class gate_trigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-       gate.transform.position += new Vector3 (0, 4, 0);
+        gate.transform.position += new Vector3(0, 4, 0);
     }
 
 }
-
