@@ -12,7 +12,7 @@ public class player_health : MonoBehaviour{
         }  
     }
     void Die() {
-        SceneManager.LoadScene("Scene1-platformer-test");
+        SceneManager.LoadScene("dungeonscene");
          
     }
 }

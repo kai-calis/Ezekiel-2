@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyMove : MonoBehaviour{
     public int EnemySpeed;
@@ -15,11 +16,16 @@ public class EnemyMove : MonoBehaviour{
             Flip();
             if (hit.collider.tag == "Player")
             {
-                Destroy (hit.collider.gameObject);
+                Die();
+
             }
-            
+
+
         }
+
     }
+
+    
 
     void Flip(){
         if (XMoveDirection > 0){
@@ -39,4 +45,11 @@ public class EnemyMove : MonoBehaviour{
 
 
     }
+    ///delete this bit if the die setting in void update doesn't work
+    void Die()
+    {
+        SceneManager.LoadScene("dungeonscene");
+
+    }
 }
+
