@@ -325,7 +325,7 @@ PrefabInstance:
     - target: {fileID: 943817148416699075, guid: b7713ea399bc78145a9f613ee1d925a4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.7
+      value: -8.96
       objectReference: {fileID: 0}
     - target: {fileID: 943817148416699075, guid: b7713ea399bc78145a9f613ee1d925a4,
         type: 3}
@@ -550,7 +550,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1585790615}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.78, y: 5.08, z: 0}
+  m_LocalPosition: {x: -12.37, y: 5.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -571,7 +571,7 @@ PrefabInstance:
     - target: {fileID: 1127666648310546807, guid: 77f3d2af9abd07d48957da44133fdd23,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -2.12
       objectReference: {fileID: 0}
     - target: {fileID: 1127666648310546807, guid: 77f3d2af9abd07d48957da44133fdd23,
         type: 3}
@@ -3334,6 +3334,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8658582512991974314}
   - component: {fileID: 8658582512991974317}
+  - component: {fileID: 8658582512991974318}
   m_Layer: 0
   m_Name: tree (1)
   m_TagString: Untagged
@@ -3389,6 +3390,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8658582512991974318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8658582512991974316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aae4355d1811cdd4c90d9a2734aa1ed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &8658582512997859086
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5096,7 +5109,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.4321918, y: 2.5353594}
+  m_Offset: {x: 1.4321918, y: 2.499322}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -5107,7 +5120,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 14.715771, y: 0.2561369}
+  m_Size: {x: 14.715771, y: 0.184062}
   m_EdgeRadius: 0
 --- !u!61 &8658582513492372833
 BoxCollider2D:
