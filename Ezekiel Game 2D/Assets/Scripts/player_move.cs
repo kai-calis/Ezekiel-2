@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//added event bc of Brackeys
+using UnityEngine.Events;
 
 public class player_move : MonoBehaviour {
 
@@ -9,13 +11,66 @@ public class player_move : MonoBehaviour {
     public int playerJumpPower = 125;
     private float moveX;
     public bool isGrounded;
+    public Animator animator;
+
+    ////////////////////////Start of Brackeys added code:
+    private Rigidbody2D m_Rigidbody2D;
+    private bool m_Grounded;
+
+    [SerializeField] private Transform m_GroundCheck;
+    [SerializeField] private LayerMask m_WhatIsGround;
+    const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
+
+    //Script of Brackeys for events
+
+    [Header("Events")]
+    [Space]
+
+    public UnityEvent OnLandEvent;
+
+    [System.Serializable]
+    public class BoolEvent : UnityEvent<bool> { }
+
+    //public BoolEvent OnCrouchEvent;
+    //private bool m_wasCrouching = false;
+
+    private void Awake()
+    {
+        m_Rigidbody2D = GetComponent<Rigidbody2D>();
+
+        if (OnLandEvent == null)
+            OnLandEvent = new UnityEvent();
+
+       
+    }
+
+    private void FixedUpdate()
+    {
+        bool wasGrounded = m_Grounded;
+        m_Grounded = false;
+
+        // The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
+        // This can be done using layers instead but Sample Assets will not overwrite your project settings.
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(m_GroundCheck.position, k_GroundedRadius, m_WhatIsGround);
+        for (int i = 0; i < colliders.Length; i++)
+        {
+            if (colliders[i].gameObject != gameObject)
+            {
+                m_Grounded = true;
+                if (!wasGrounded)
+                    OnLandEvent.Invoke();
+            }
+        }
+    }
+    ///////////////////////End of BRACKEY's script
+    
 
     // Update is called once per frame
     void Update()
     {
         PlayerMove();
         PlayerRaycast();
-
+        animator.SetFloat("speed", Mathf.Abs(moveX));
 
 
     }
@@ -26,6 +81,7 @@ public class player_move : MonoBehaviour {
         if (Input.GetButtonDown("Jump") && isGrounded == true)
         {
             Jump();
+            animator.SetBool("isJumping", true);
         }
         //ANIMATION
         //PLAYER DIRECTION
@@ -56,11 +112,14 @@ public class player_move : MonoBehaviour {
 
     }
 
-   void OnCollisionEnter2D(Collision2D Col){
-        //Debug.Log ("Player has collided with " + Col.collider.name);
-        
+    //CODE FOR to know if you stopped jumping? (added bc of Brackeys)
+    public void  OnLanding ()
+    {
+        animator.SetBool("isJumping", false);
+
 
     }
+
 
     void PlayerRaycast() {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down);
