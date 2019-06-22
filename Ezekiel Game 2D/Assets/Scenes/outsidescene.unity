@@ -630,6 +630,100 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77f3d2af9abd07d48957da44133fdd23, type: 3}
+--- !u!1001 &1607967711
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4179799259832642738, guid: 3b416317de830a047af17aee762a474e,
+        type: 3}
+      propertyPath: m_Name
+      value: level trigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 4179799259832642736, guid: 3b416317de830a047af17aee762a474e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 117.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4179799259832642736, guid: 3b416317de830a047af17aee762a474e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 4179799259832642736, guid: 3b416317de830a047af17aee762a474e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 40.95703
+      objectReference: {fileID: 0}
+    - target: {fileID: 4179799259832642736, guid: 3b416317de830a047af17aee762a474e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4179799259832642736, guid: 3b416317de830a047af17aee762a474e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4179799259832642736, guid: 3b416317de830a047af17aee762a474e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.00018612668
+      objectReference: {fileID: 0}
+    - target: {fileID: 4179799259832642736, guid: 3b416317de830a047af17aee762a474e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4179799259832642736, guid: 3b416317de830a047af17aee762a474e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4179799259832642736, guid: 3b416317de830a047af17aee762a474e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4179799259832642736, guid: 3b416317de830a047af17aee762a474e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4179799259832642736, guid: 3b416317de830a047af17aee762a474e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0.021000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 4179799259832642739, guid: 3b416317de830a047af17aee762a474e,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 4.0174313
+      objectReference: {fileID: 0}
+    - target: {fileID: 4179799259832642739, guid: 3b416317de830a047af17aee762a474e,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 2.4474387
+      objectReference: {fileID: 0}
+    - target: {fileID: 4179799259832642739, guid: 3b416317de830a047af17aee762a474e,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.20615298
+      objectReference: {fileID: 0}
+    - target: {fileID: 4179799259832642739, guid: 3b416317de830a047af17aee762a474e,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.2998039
+      objectReference: {fileID: 0}
+    - target: {fileID: 4179799259832642737, guid: 3b416317de830a047af17aee762a474e,
+        type: 3}
+      propertyPath: Loadlevel
+      value: endScene
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3b416317de830a047af17aee762a474e, type: 3}
 --- !u!1 &1673853393
 GameObject:
   m_ObjectHideFlags: 0
@@ -659,7 +753,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d25468e9d7139964983c100d18e376f0, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.863
+  m_Volume: 0.766
   m_Pitch: 1
   Loop: 0
   Mute: 0
